@@ -65,7 +65,7 @@ def basic_sort(c):
         for j in range(0, i):
             if (d[i] < d[j]):
                 d[i], d[j] = d[j], d[i]
-    print(d)
+    return(d)
 raise NotImplementedError()
 	
 
