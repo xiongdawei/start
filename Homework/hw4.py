@@ -60,7 +60,7 @@ def draw_smalltree(tree_length,tree_angle):
         tl.left(2 * tree_angle) 
         draw_smalltree(tree_length -10,tree_angle)
 
-        tl.rt(tree_angle) #???
+        tl.right(tree_angle) #???
         tl.backward(tree_length)
 
 def main():
@@ -72,9 +72,12 @@ def main():
     tree_length = 60 
     tree_angle = 20 
     draw_smalltree(tree_length,tree_angle)
-#main()
+main()
 #fib(40)
 a=[0,1,1]
-for i in range(1,10):
+r=0
+for i in range(1,102):
     a[i%3]=a[(i+1)%3]+a[(i+2)%3]
     print(a[i%3])
+    r=r+a[i%3]
+print(r) 
