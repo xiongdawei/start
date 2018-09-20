@@ -45,3 +45,36 @@ def jiecheng(a):
         return 1
     else:
         return a*jiecheng(a-1)
+    
+import turtle as tl 
+
+def draw_smalltree(tree_length,tree_angle):
+    '''
+    绘制分形树函数
+    '''
+    if tree_length >= 3:
+        tl.forward(tree_length)
+        tl.right(tree_angle) 
+        draw_smalltree(tree_length - 10,tree_angle)
+
+        tl.left(2 * tree_angle) 
+        draw_smalltree(tree_length -10,tree_angle)
+
+        tl.rt(tree_angle) #???
+        tl.backward(tree_length)
+
+def main():
+    tl.penup()
+    tl.left(90) 
+    #tl.backward(250)
+    tl.bgcolor("light blue")
+    tl.pendown()
+    tree_length = 60 
+    tree_angle = 20 
+    draw_smalltree(tree_length,tree_angle)
+#main()
+#fib(40)
+a=[0,1,1]
+for i in range(1,10):
+    a[i%3]=a[(i+1)%3]+a[(i+2)%3]
+    print(a[i%3])
