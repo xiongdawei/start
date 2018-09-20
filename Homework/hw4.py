@@ -22,16 +22,25 @@ def fib(a):
     else:
         return(fib(a-1)+fib(a-2))
 def sumd(a,b):
+    '''
+    input the start and end and outputs the sum of terms within
+    '''
     if(a==b):
         return a
     else:
         return a+sumd(a-1,b)
 def power(a,b):
+    '''
+    returns a**b
+    '''
     if(b==1):
         return a
     else:
         return(a*power(a,b-1))
 def jiecheng(a):
+    '''
+    returns a!
+    '''
     if(a==1):
         return 1
     else:
